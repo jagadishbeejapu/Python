@@ -1,0 +1,50 @@
+package com;
+public class PaySlip {
+	public double calculateBasicSal(double grossSal)
+	{
+		double basicSal=(0.4)*grossSal;
+		return basicSal;
+	}
+public double calculatePF(double basicSal)
+	{
+		double pf=(0.12)*basicSal;
+	return pf;
+	}
+  public double caclculateHRA(double basicSal)
+	{
+		double hra=(0.50)*basicSal;
+		return hra;
+		}
+  public double calculateTotalSal(double basicSal,double hra,double cityallowance,double sundry,double lta,double performancePay)
+	{
+		double totalSal= basicSal+hra+cityallowance+sundry+lta+performancePay;
+		return totalSal;
+		
+		}
+	public double calculateTotalDeductions(double totalSal,double pf,double profTax,double incomeTax)
+	{
+		double totalDeductions= totalSal-pf-profTax-incomeTax;
+		return totalDeductions;
+	}
+	public double calculateAnualSal(double totalSal)
+	{
+		double AnnualSal=  totalSal*12;
+		return AnnualSal;
+		}
+	public double calculateAnnualRevisedSal(double AnnualSal,double performanceHike)
+	{
+		double AnnualRevisedSal= AnnualSal+performanceHike;
+		return AnnualRevisedSal;
+		} 
+	}
+----------------
+package com;
+public class PaySlipDemo {
+	double grossSal=6000;
+	double basicSal,profTax;
+	double totalSal,hra,cityallowance,PerformancePay,sundry,lta,incomeTax,pf,percentageHike,annualSal;
+		public static void main(String[] args) {
+	PaySlip obj=new PaySlip();
+	obj.calculateBasicSal(6000);
+	obj.caclculateHRA(65);
+		}
