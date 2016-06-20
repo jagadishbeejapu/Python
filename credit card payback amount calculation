@@ -1,0 +1,38 @@
+package com;
+
+public class CreditCardCompany {
+public double getPaybackAmount(Customer a){
+	double PaybackAmount=0;
+	if(a.getCreditCardCharges()<500){
+		double num=a.getCreditCardCharges();
+		PaybackAmount= ((0.25*num*1)/100);
+		return PaybackAmount;
+	}
+	else if(a.getCreditCardCharges()>500 && a.getCreditCardCharges()<1500){
+	double num =a.getCreditCardCharges();
+	
+	PaybackAmount= ((0.50*num*1)/100);
+	return PaybackAmount;
+	}
+		
+	
+	return 0;
+}
+}
+
+
+
+-----------------
+package com;
+
+public class CreditCardDemo {
+public static void main(String args[]){
+	Customer custobj1= new Customer(123,2345,1500);
+	
+	CreditCardCompany obj = new CreditCardCompany();
+    System.out.println(obj.getPaybackAmount(custobj1));
+    
+
+}
+}
+
