@@ -1,0 +1,71 @@
+package com;
+
+import java.util.*;
+
+class Calculator {
+	public static int add(int a,int b){
+		try{
+			Scanner sc= new Scanner(System.in);
+			System.out.println("enter the value for left operand ");
+			
+			int aa= sc.nextInt();
+			System.out.println("enter the value for right operand ");
+			int bb= sc.nextInt();
+			System.out.println("the sum is ");
+			int sum= (a+b);
+			return sum;
+		}
+		catch(InputMismatchException IME){
+			return 0;
+		}
+	}
+	public static int subtract(int a,int b){
+		try{
+			Scanner sc= new Scanner(System.in);
+			System.out.println("enter the value for left operand ");
+			
+			int aa= sc.nextInt();
+			System.out.println("enter the value for right operand ");
+			int bb= sc.nextInt();
+			System.out.println("the difference is ");
+			int difference= (a-b);
+			return difference;
+		}
+		catch(InputMismatchException IME){
+			return 0;
+		}
+	}
+	public static int multiply(int a,int b){
+		try{
+			Scanner sc= new Scanner(System.in);
+			System.out.println("enter the value for left operand ");
+			
+			int aa= sc.nextInt();
+			System.out.println("enter the value for right operand ");
+			int bb= sc.nextInt();
+			System.out.println("the multiplication is ");
+			int multiplication= (a*b);
+			return multiplication;
+		}
+		catch(InputMismatchException IME){
+			return 0;
+		}
+	}
+	public static int divide(int a,int b){
+		try{
+			Scanner sc= new Scanner(System.in);
+			System.out.println("enter the value for left operand ");
+			
+			int aa= sc.nextInt();
+			System.out.println("enter the value for right operand ");
+			int bb= sc.nextInt();
+			System.out.println("the division is ");
+			int division= (a%b);
+			return division;
+		}
+		catch(InputMismatchException IME){
+			return 0;
+		}
+	}
+
+}
