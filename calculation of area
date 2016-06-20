@@ -1,0 +1,78 @@
+package com;
+import java.util.*;
+public class AreaDemo {
+		private static double Radius;
+		private static double Length;
+		private static double Width;
+		private double Height;
+		static double pi=22.0/7;
+		static double area;
+		static double volume;
+		
+
+	 public static double findArea(double Radius){
+		 try{
+	     Scanner sc= new Scanner(System.in);
+		 System.out.println("enter the radius to calculate Area of Circle");
+		 Radius=sc.nextDouble();
+		 area=pi*Radius*Radius;
+		 return area;
+		 }
+		 catch(InputMismatchException ime)
+		 {
+			 return -1;
+			 
+		 }
+	}
+
+	 public static double findArea(double Length,double Width){
+		 try{
+		 Scanner sc= new Scanner(System.in); 
+		 System.out.println("enter length and breadth to calculate Area of Circle");
+	 Length=sc.nextDouble();
+	 Width=sc.nextDouble();
+		 
+		 return area= Length*Width;}
+		 catch(InputMismatchException ime)
+		 {
+			 return -1;
+		 }
+	 }
+	 
+	 public static double findVolume(double Radius){
+		 try{
+			 Scanner sc= new Scanner(System.in); 
+			 System.out.println("enter radius to calculate volume of sphere");
+			 Radius=sc.nextDouble();
+			 return volume = (4/3)*pi*Radius*Radius*Radius;
+	 }
+		 catch(InputMismatchException ime)
+		 {
+			 return -1;
+		 }
+	 }
+		 
+	 public static double findVolume(double Radius,double Height)
+	 {try{
+		 Scanner sc= new Scanner(System.in); 
+		 System.out.println("enter radius and height to calculate volume of cylinder");
+		 Radius=sc.nextDouble();
+		 Height=sc.nextDouble(); 
+		 return volume= pi*Radius*Radius*Height;
+	 }
+	 catch(InputMismatchException ime)
+	 {
+		 return -1;
+	 }
+	 }
+
+	 public static void main(String args[])
+	 {
+	 System.out.println(AreaDemo.findArea(4));
+	 System.out.println(AreaDemo.findArea(4,5));
+	 System.out.println(AreaDemo.findVolume(4));
+	 System.out.println(AreaDemo.findVolume(4,5));
+	 
+	 }
+	}
+
