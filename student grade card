@@ -1,0 +1,39 @@
+package com;
+import java.util.*;
+public class GradeDemo {
+	public static void main(String[] args) {
+	System.out.println(GradeDemo.findGrade());
+	}
+	public static char findGrade(){
+		char grade = 'O';
+		try{
+			Scanner sc=new Scanner(System.in);
+			System.out.println("enter the percentage");
+			double Percent=sc.nextDouble();
+		    
+				if (Percent>=80 ){
+					grade='A';
+				}
+				else if (Percent>=60&Percent<80){
+					grade='B';
+				}
+				else if (Percent>=40&Percent<60){
+					grade='C';
+				}
+				else if (Percent>=30&Percent<40){
+					grade='D';
+				}
+				else if (Percent<30){
+					grade='E';
+				}
+		}
+		catch(InputMismatchException ime){
+			return grade='O';
+		}
+		return grade;	
+		}
+	}
+
+
+
+
